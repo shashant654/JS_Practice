@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello Javascript Bootcamp</h1>
+    <ul>
+
+    </ul>
+
+    <button onclick="maths()" id="fsjs3">Submit</button>
+
+    <p id="js"></p>
+    <script>
+        // create inner HTML 
+        const List = `
+                <li>Rohit</h1>  
+                <li>Rohit</h1>   
+                <li>Rohit</h1>   
+                  <li>Rohit</h1>   
+                     <li>Rohit</h1>   
+                    <li>Rohit</h1>   
+                     <li>Rohit</h1> `;
+
+                    const ul = document.querySelector("ul")    
+                    ul.innerHTML = List;
+
+        // create Element on screen
+        let title = document.createElement("h1")
+        title.className = "title"
+        title.style.fontSize = "25px"
+        title.style.color = "Blue"
+        title.textContent = "Creating New Element in DOM Day 2"
+        console.log(title);
+        document.body.appendChild(title)
+
+
+
+
+        // for loop
+        for(let i =0;i<3;i++) {
+            let para = document.createElement("p")
+            para.className = "FSJS"
+            para.style.fontSize="20px"
+            console.log(para);
+            para.textContent = i;
+            document.body.appendChild(para)
+        }
+
+        // btn part 
+        function maths() {
+            let value = prompt("solve this 50 - 30")
+            if(value == 20) {
+                document.getElementById("js").innerText = "Success Redirect"
+                document.getElementById("js").style.color= "Green"
+                document.getElementById("fsjs3").style.backgroundColor = "Green"
+            }
+            else {
+                document.getElementById("js").innerText = "Fail try again"
+                document.getElementById("js").style.color= "Red"
+                document.getElementById("fsjs3").style.backgroundColor = "Red"
+
+          
+            }
+        }
+
+        
+
+    </script>
+
+    <!-- <h1 class="title" style="font-size: 25px; color: green;"> Creating New Element in DOM Day 2</h1> -->
+</body>
+
+</html>
